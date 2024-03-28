@@ -20,6 +20,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
 public class LuceneTest {
     public void testCore() throws IOException, ParseException {
         Analyzer analyzer = new StandardAnalyzer();
@@ -51,5 +55,6 @@ public class LuceneTest {
         ireader.close();
         directory.close();
         IOUtils.rm(indexPath);
+
     }
 }
